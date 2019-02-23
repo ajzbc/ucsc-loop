@@ -21,7 +21,7 @@ mapLeft[0].appendChild(info);
 
 var count = document.createElement("div");
 count.className = "count";
-count.innerHTML = "Buses In Service:  <b id='service'>4</b>";
+count.innerHTML = "Buses In Service:  <b id='service'>loading</b>";
 
 mapLeft[0].appendChild(count);
 
