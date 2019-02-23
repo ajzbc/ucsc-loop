@@ -56,3 +56,13 @@ body {
     cursor: pointer;
     margin-right: 15px;
 }
+
+.count {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    color: rgba(0,0,0,.7);
+    font: 18px "-apple-system-font","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 500;
+    text-shadow: 0 0 1px rgba(255,255,255,.85);
+}

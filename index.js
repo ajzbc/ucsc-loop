@@ -9,9 +9,21 @@ var Campus = new mapkit.CoordinateRegion(
     new mapkit.CoordinateSpan(.02, 0.02)
 );
 
-var MarkerAnnotation = mapkit.MarkerAnnotation, clickAnnotation;
-
 var map = new mapkit.Map("map");
+
+var mapLeft = document.getElementsByClassName("mk-bottom-left-controls-container");
+
+var info = document.createElement("div");
+info.className = "info";
+info.innerHTML = "Created by <a class='link' href='https://ajzbc.com'>ajzbc</a> Find on <a class='link' href='https://github.com/ajzbc'>GitHub</a>"
+
+mapLeft[0].appendChild(info);
+
+var count = document.createElement("div");
+count.className = "count";
+count.innerHTML = "Buses In Service:  <b id='service'>4</b>";
+
+mapLeft[0].appendChild(count);
 
 var browser = navigator.userAgent.indexOf("Chrome") != -1;
 
@@ -63,6 +75,12 @@ function placeBuses() {
             var annotation = new mapkit.Annotation(new mapkit.Coordinate(bus.lat, bus.lon), customA, options);
             map.addAnnotation(annotation);
         });
+
+        if(!data[0]) {
+            document.getElementById("service").innerHTML = 0;
+        } else {
+            document.getElementById("service").innerHTML = data.count;
+        }
     
     }).catch(err => {
         console.log(err);
@@ -75,11 +93,3 @@ map.region = Campus;
 window.setInterval(function(){
     placeBuses();
 }, 3000);
-
-var bottom = document.getElementsByClassName("mk-bottom-left-controls-container");
-
-var info = document.createElement("div");
-info.className = "info";
-info.innerHTML = "Created by <a class='link' href='https://ajzbc.com'>ajzbc</a> Find on <a class='link' href='https://github.com/ajzbc'>GitHub</a>"
-
-bottom[0].appendChild(info);
