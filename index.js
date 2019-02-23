@@ -5,8 +5,8 @@ mapkit.init({
 });
 
 var Campus = new mapkit.CoordinateRegion(
-    new mapkit.Coordinate(36.990320, -122.058319),
-    new mapkit.CoordinateSpan(.02, 0.02)
+    new mapkit.Coordinate(36.990222, -122.058561),
+    new mapkit.CoordinateSpan(0.02, 0.02)
 );
 
 var map = new mapkit.Map("map");
