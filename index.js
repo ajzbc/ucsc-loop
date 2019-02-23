@@ -15,7 +15,7 @@ var mapLeft = document.getElementsByClassName("mk-bottom-left-controls-container
 
 var info = document.createElement("div");
 info.className = "info";
-info.innerHTML = "Created by <a class='link' href='https://ajzbc.com'>ajzbc</a> Find on <a class='link' href='https://github.com/ajzbc'>GitHub</a>"
+info.innerHTML = "Created by <a class='link' href='https://ajzbc.com'>Andrew Jazbec</a> Find on <a class='link' href='https://github.com/ajzbc'>GitHub</a>"
 
 mapLeft[0].appendChild(info);
 
