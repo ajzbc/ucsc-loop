@@ -5,9 +5,9 @@ mapkit.init({
 });
 
 var Campus = new mapkit.CoordinateRegion(
-    new mapkit.Coordinate(36.990222, -122.058561),
-    new mapkit.CoordinateSpan(0.02, 0.02)
-);
+    new mapkit.Coordinate(36.989537530470294, -122.05852024725598),
+    new mapkit.CoordinateSpan(0.0243376876410224, 0.022487640380859375)
+    );
 
 var map = new mapkit.Map("map");
 
@@ -79,7 +79,7 @@ function placeBuses() {
         if(!data[0]) {
             document.getElementById("service").innerHTML = 0;
         } else {
-            document.getElementById("service").innerHTML = data.count;
+            document.getElementById("service").innerHTML = data.length;
         }
     
     }).catch(err => {
