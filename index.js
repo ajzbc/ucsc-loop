@@ -1,5 +1,5 @@
 mapkit.init({
-    authorizationCallback: function(done) {
+    authorizationCallback: function (done) {
         done('eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkFERkMzRks5WUwifQ.eyJpc3MiOiJHWjg0NVlRUDZFIiwiaWF0IjoxNTU0NzY2ODAxLCJleHAiOjE1ODY5MDc2MDF9.PO_7FkHPWAH27l7u8brP4PUT5EBUPvQM9g8AIzn0wd8s0-RbFYMvRyuV7kdDWvKRXC_m_X4CJO82TZGbLmuxbw');
     }
 });
@@ -11,7 +11,7 @@ var Campus = new mapkit.CoordinateRegion(
 
 var map = new mapkit.Map("map");
 
-var mapAtr = document.getElementsByClassName("mk-map-view mk-disable-all-gestures");
+var mapAtr = document.getElementById("map");
 
 console.log(mapAtr);
 
@@ -19,13 +19,13 @@ var info = document.createElement("div");
 info.className = "info";
 info.innerHTML = "Created by <a class='link' href='https://ajzbc.com'>Andrew Jazbec</a> Find on <a class='link' href='https://github.com/ajzbc'>GitHub</a>"
 
-mapAtr[0].appendChild(info);
+mapAtr.appendChild(info);
 
 var count = document.createElement("div");
 count.className = "count";
 count.innerHTML = "Buses In Service:  <b id='service'>loading</b>";
 
-mapAtr[0].appendChild(count);
+mapAtr.appendChild(count);
 
 var browser = navigator.userAgent.indexOf("Chrome") != -1;
 
@@ -40,7 +40,7 @@ function placeBuses() {
         return response.json();
     }).then(data => {
 
-        var customA = function(coordinate, options) {
+        var customA = function (coordinate, options) {
             var div = document.createElement("div");
             div.className = "annotation";
 
@@ -66,7 +66,7 @@ function placeBuses() {
         busLandmarks = [];
         map.removeAnnotations(map.annotations);
 
-        data.forEach(function(bus) {
+        data.forEach(function (bus) {
             console.log(bus);
 
             var options = {
@@ -92,6 +92,6 @@ function placeBuses() {
 placeBuses();
 map.region = Campus;
 
-window.setInterval(function() {
+window.setInterval(function () {
     placeBuses();
 }, 3000);
