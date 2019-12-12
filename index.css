@@ -1,72 +1,80 @@
 body {
-    margin: 0px;
-    font-family: sans-serif;
+	margin: 0px;
+	font-family: sans-serif;
+}
+
+.warning {
+	width: 100%;
+	height: 5vh;
+	line-height: 5vh;
+	background-color: rgb(255, 217, 0);
+	padding-left: 12px;
 }
 
 #map {
-    width: 100%;
-    height: 100vh;
-    /* Fallback for browsers that do not support Custom Properties */
-    height: calc(var(--vh, 1vh) * 100);
+	width: 100%;
+	height: 95vh;
+	/* Fallback for browsers that do not support Custom Properties */
+	/* height: calc(var(--vh, 1vh) * 100); */
 }
 
 .annotation {
-    margin: 0px;
+	margin: 0px;
 }
 
 .annotation-good {
-    margin: 0px;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background-color: #06D6A0;
-    text-align: center;
-    line-height: 32px;
+	margin: 0px;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	background-color: #06d6a0;
+	text-align: center;
+	line-height: 32px;
 }
 
 .annotation-bad {
-    margin: 0px;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background-color: #EF476F;
-    text-align: center;
-    line-height: 32px;
+	margin: 0px;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	background-color: #ef476f;
+	text-align: center;
+	line-height: 32px;
 }
 
 .info {
-    position: absolute;
-    bottom: 5px;
-    width: 98%;
-    text-align: center;
-    color: rgba(0, 0, 0, .7);
-    font: 11px "-apple-system-font", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 500;
-    text-shadow: 0 0 1px rgba(255, 255, 255, .85);
-    pointer-events: auto;
-    white-space: nowrap;
-    cursor: pointer;
-    padding: 4px 5px 6px 5px;
+	position: absolute;
+	bottom: 5px;
+	width: 98%;
+	text-align: center;
+	color: rgba(0, 0, 0, .7);
+	font: 11px "-apple-system-font", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 500;
+	text-shadow: 0 0 1px rgba(255, 255, 255, .85);
+	pointer-events: auto;
+	white-space: nowrap;
+	cursor: pointer;
+	padding: 4px 5px 6px 5px;
 }
 
 .link {
-    color: rgba(0, 0, 0, .7);
-    font: 11px "-apple-system-font", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 500;
-    text-decoration: underline;
-    text-shadow: 0 0 1px rgba(255, 255, 255, .85);
-    pointer-events: auto;
-    white-space: nowrap;
-    cursor: pointer;
-    margin-right: 15px;
+	color: rgba(0, 0, 0, .7);
+	font: 11px "-apple-system-font", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 500;
+	text-decoration: underline;
+	text-shadow: 0 0 1px rgba(255, 255, 255, .85);
+	pointer-events: auto;
+	white-space: nowrap;
+	cursor: pointer;
+	margin-right: 15px;
 }
 
 .count {
-    position: absolute;
-    left: 12px;
-    top: 12px;
-    color: rgba(0, 0, 0, .7);
-    font: 18px "-apple-system-font", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 500;
-    text-shadow: 0 0 1px rgba(255, 255, 255, .85);
+	position: absolute;
+	left: 12px;
+	top: calc(5vh + 12px);
+	color: rgba(0, 0, 0, .7);
+	font: 18px "-apple-system-font", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 500;
+	text-shadow: 0 0 1px rgba(255, 255, 255, .85);
 }
